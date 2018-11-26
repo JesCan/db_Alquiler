@@ -12,3 +12,27 @@ use dbAlquiler;
 
 /* Verificar que la base de datos esté en uso*/
 select database();
+
+/* Mostrar tablas */
+show tables;
+
+/* Crear la tabla Persona */
+create table PERSONA
+(
+    CODPER int,
+    NOMPER VARCHAR(100),
+    APEPATPER VARCHAR(150),
+    APEMATPER VARCHAR (150),
+    DNIPER char(8),
+    DIRPER VARCHAR(150),
+    UBIGEO_CODUBI CHAR (6),
+    TELEF1PER CHAR(9),
+    TELEF2PER CHAR(9),
+    SEXOPER CHAR(1),
+    TIPOPER CHAR(1),
+    USUPER VARCHAR(50),
+    PASSPER varchar(50),
+    CONSTRAINT CODPER_PK PRIMARY KEY (CODPER)
+);
+/* Verificar si se ha creado la tabala Persona */
+show tables;
