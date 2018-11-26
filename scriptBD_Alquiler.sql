@@ -111,3 +111,8 @@ create table DETALLE_ALQUILER
 );
 /* Verificar tablas creadas */
 show tables;
+
+/* Relación entre la tabla Persona - UBIGEO */
+alter table PERSONA
+    add CONSTRAINT UBIGEO_FK FOREIGN KEY (UBIGEO_CODUBI)
+    REFERENCES UBIGEO (CODUBI);
