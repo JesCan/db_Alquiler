@@ -55,3 +55,59 @@ create table UBIGEO
 
  /* verificar estructura de la tabla UBIGEO */
  show columns in UBIGEO;
+
+ /* Creamos la tabla VIVIENDA */
+ create table VIVIENDA
+ (
+   CODVIV int,
+   DESCVIV VARCHAR(150),
+   DIRVIV varchar(150),
+   UBIGEO_CODUBI CHAR(6),
+   ESTADOVIVIENDA_CODESTVIV INT,
+   TIPOVIVIENDA_CODTIPVIV INT,
+   CONSTRAINT CODVIV_PK PRIMARY KEY (CODVIV)
+ );
+ /* Verificar que se ha creado la tabla vivienda */
+ show tables;
+
+ /* Verificar estructura de la tabla vivienda */
+ show columns in vivienda;
+
+ /* Crear tabla ESTADO VIVIENDA */
+ create TABLE ESTADO_VIVIENDA
+ (
+     CODESTVIV INT,
+     DESCESTVIV VARCHAR(50),
+     CONSTRAINT CODESTVIV_PK PRIMARY KEY (CODESTVIV)
+ );
+/* Crear tabla Tipo Vivienda */
+create table TIPO_VIVIENDA
+(
+    CODTIPVIV int,
+    DESCTIPVIV varchar(50),
+    CONSTRAINT CODTIPVIV_PK PRIMARY KEY (CODTIPVIV)
+);
+/* Verificar tablas */
+show tables;
+
+/* Crear la tabla ALQUILER */
+create table ALQUILER
+(
+    CODALQ int,
+    FECINCALQ DATE,
+    PERSONA_PROP INT,
+    PERSONA_INQ INT,
+    CONSTRAINT CODALQ_PK PRIMARY KEY (CODALQ)
+);
+/* Crear la tabla DETALLE ALQUILER */
+create table DETALLE_ALQUILER
+(
+    CODDETALQ int,
+    VIVIENDA_CODVIV INT,
+    FECINICDETALQ DATE,
+    COSTDETALQ DECIMAL(8,2),
+    ALQUILER_CODALQ INT,
+    CONSTRAINT CODDETALQ_PK PRIMARY KEY (CODDETALQ)
+);
+/* Verificar tablas creadas */
+show tables;
